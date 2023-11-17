@@ -7,7 +7,43 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <div class="show">
+        <div class="book">
+            <h2 class="book-title">Book title</h2>
+            <h3 class="author">Author</h3>
+            <p class="pages">Pages: </p>
+            <p class="status">Read</p>
+        </div>
     
-    <script type="text/javascript" src="script.js"></script>
+        <div class="to-form">
+            <button class="to-form-btn">Add new book?</button>
+        </div>
+    </div>
+
+    <form action="/add-new-book" method="post" class="add-book">
+        <section class="form-section">
+            <h2>Add a new book to the library!</h2>
+            <ul>
+                <li>
+                    <label for="title">Book title:</label>
+                    <input type="text" id="title" name="title" />
+                </li>
+                <li>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" />
+                </li>
+                <li>
+                    <label for="pages">Book pages:</label>
+                    <input type="text" id="pages" name="pages" />
+                </li>
+                <li>
+                    <label for="read">Read yet?</label>
+                    <input type="checkbox" id="read" name="read" />
+                </li>
+            </ul>
+        </section>
+        <button class="go-back" style="display: block;">Go back</button>
+    </form>
 </body>
+<script type="text/javascript" src="script.js"></script>
 </html>
