@@ -56,7 +56,6 @@ function addBookCard(title, author, pages, read) {
 
 
 window.onload = function() {
-    // Your code or function to run when the page loads
     for(let i=0; i<myLibrary.length; i++)
     addBookCard(myLibrary[i].title, myLibrary[i].author, myLibrary[i].pages, myLibrary[i].read)
 
@@ -79,8 +78,15 @@ function handleSubmit(event) {
     const pages = document.getElementById('pages').value;
     const read = document.getElementById('read').checked;
 
-    myLibrary.push(new Book(title, author, pages, read));
-    addBookCard(title, author, pages, read);
-    closePopup();
-    clearValues();
+    if (title && author && pages) {
+        // All required fields are filled, proceed with submission
+        myLibrary.push(new Book(title, author, pages, read));
+        addBookCard(title, author, pages, read);
+        closePopup();
+        clearValues();
+    } else {
+        // Display an error message or take appropriate action for invalid form
+        alert('Please fill in all required fields.');
+    }
+
 }
