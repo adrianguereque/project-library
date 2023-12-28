@@ -1,6 +1,15 @@
+.show {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .header{
     text-align: center;
+    margin-bottom: 20px;
+
 }
 
 .books{
@@ -16,6 +25,7 @@
     justify-content: center;
     background-color: rgba(255, 255, 0, 0.458);
     width: max(200px, 30%);
+    margin-bottom: 16px;
 }
 
 .overlay {
